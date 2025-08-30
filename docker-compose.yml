@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  demo:
+    container_name: demo
+    image: nox/demo:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DB_URL: ${DB_URL}
+        DB_USER: ${DB_USER}
+        DB_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:dsdsdsdsds
+      DB_USER: dsdsds
+      DB_PASSWORD: sdsdsds
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    volumes:
+      - /my/project/dir:/app
+
+  mongodb:
+    image: mongodb/mongodb-community-server:7.0-ubi9
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: mongopasswd
+    ports:
+      - "27017:27017"
+    volumes:
+      - mymongodata:/data/db
+      - type: bind
+        source: ./mongo-entrypoint
+        target: /docker-entrypoint-initdb.d/
+    healthcheck:
+      test: echo 'db.runCommand({find:"app_db_name.devUser"}).ok' | mongosh --authenticationDatabase admin --host localhost -u mongoadmin -p mongopasswd admin --quiet | grep -q 1
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+
+volumes:
+  mymongodata:
