@@ -20,7 +20,7 @@ class SecurityConfig(
             .csrf { csrf -> csrf.disable() }
             .sessionManagement { it.sessionCreationPolicy(SessionCreationPolicy.STATELESS) }
             .authorizeHttpRequests { auth ->
-                auth.requestMatchers("/auth/**")
+                auth.requestMatchers("/auth/**", "/v3/api-docs/**", "/swagger-ui/**")
                     .permitAll() // permite sem auth token
                     .dispatcherTypeMatchers(
                         DispatcherType.ERROR,
