@@ -1,4 +1,4 @@
-package com.example.demo.security
+package com.example.notesapp.security
 
 import jakarta.servlet.DispatcherType
 import org.springframework.context.annotation.Bean

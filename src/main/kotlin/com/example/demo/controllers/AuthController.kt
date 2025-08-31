@@ -1,6 +1,6 @@
-package com.example.demo.controllers
+package com.example.notesapp.controllers
 
-import com.example.demo.security.AuthService
+import com.example.notesapp.security.AuthService
 import jakarta.validation.Valid
 import jakarta.validation.constraints.Email
 import jakarta.validation.constraints.Pattern

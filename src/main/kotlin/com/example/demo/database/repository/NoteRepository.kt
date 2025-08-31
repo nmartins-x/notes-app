@@ -1,6 +1,6 @@
-package com.example.demo.database.repository
+package com.example.notesapp.database.repository
 
-import com.example.demo.database.model.Note
+import com.example.notesapp.database.model.Note
 import org.bson.types.ObjectId
 import org.springframework.data.mongodb.repository.MongoRepository
 

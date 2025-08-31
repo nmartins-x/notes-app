@@ -1,4 +1,4 @@
-package com.example.demo.security
+package com.example.notesapp.security
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Component

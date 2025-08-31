@@ -1,4 +1,4 @@
-package com.example.demo.security
+package com.example.notesapp.security
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.MethodArgumentNotValidException

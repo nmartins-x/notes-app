@@ -11,10 +11,10 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>notesapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>notesapp</name>
+	<description>NotesApp project for Spring Boot</description>
 	<url/>
 
 	<licenses>
@@ -135,7 +135,7 @@
 				</dependencies>
 			</plugin>
 		</plugins>
-        <finalName>demodocker</finalName>
+        <finalName>notesappdocker</finalName>
 	</build>
 
 </project>

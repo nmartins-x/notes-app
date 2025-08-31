@@ -1,9 +1,9 @@
-package com.example.demo.security
+package com.example.notesapp.security
 
-import com.example.demo.database.model.RefreshToken
-import com.example.demo.database.model.User
-import com.example.demo.database.repository.RefreshTokenRepository
-import com.example.demo.database.repository.UserRepository
+import com.example.notesapp.database.model.RefreshToken
+import com.example.notesapp.database.model.User
+import com.example.notesapp.database.repository.RefreshTokenRepository
+import com.example.notesapp.database.repository.UserRepository
 import java.security.MessageDigest
 import org.bson.types.ObjectId
 import org.springframework.http.HttpStatus

@@ -1,4 +1,4 @@
-package com.example.demo.database.model
+package com.example.notesapp.database.model
 
 import org.bson.types.ObjectId
 import org.springframework.data.annotation.Id

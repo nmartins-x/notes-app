@@ -1,16 +1,12 @@
 version: '3.9'
 
 services:
-  demo:
-    container_name: demo
-    image: nox/demo:latest
+  notesapp:
+    container_name: notesapp
+    image: nox/notesapp:latest
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        DB_URL: ${DB_URL}
-        DB_USER: ${DB_USER}
-        DB_PASSWORD: ${DB_PASSWORD}
     ports:
       - "8080:8080"
     environment:

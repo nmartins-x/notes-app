@@ -1,7 +1,7 @@
-package com.example.demo.controllers
+package com.example.notesapp.controllers
 
-import com.example.demo.database.model.Note
-import com.example.demo.database.repository.NoteRepository
+import com.example.notesapp.database.model.Note
+import com.example.notesapp.database.repository.NoteRepository
 import jakarta.validation.Valid
 import jakarta.validation.constraints.NotBlank
 import org.bson.types.ObjectId
